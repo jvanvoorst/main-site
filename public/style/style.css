@@ -1,0 +1,22 @@
+.background {
+	background: url("../images/tmb-crop.jpg") bottom right no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.nav-box {
+	height: 8em;
+	opacity: 0.3;
+}
+.nav-container {
+	padding-top: 10em;
+}
+.nav-box-red {
+	background-color: red;
+}
+.nav-box-yellow {
+	background-color: purple;
+}
+.nav-box-green {
+	background-color: darkgreen;
+}
