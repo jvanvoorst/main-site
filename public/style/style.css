@@ -5,8 +5,15 @@
 	height: 100%;
 }
 .nav-box {
-	height: 8em;
 	opacity: 0.3;
+	color: white;
+	cursor: pointer;
+}
+.nav-start {
+	font-size: 3em;
+	color: white;
+	font-family: Lato;
+	text-align: center;
 }
 .nav-container {
 	padding-top: 10em;

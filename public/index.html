@@ -1,23 +1,41 @@
-<html>
+<html ng-app="myApp">
 <head>
 	<title>HomePage</title>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
-	
+
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 
 </head>
 
-<body>
+<body ng-controller="mainController">
 	<div class="background">
 		<div class="container-fluid nav-container">
 			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-3 nav-box nav-box-red">1</div>
-				<div class="col-md-3 nav-box nav-box-yellow">2</div>
-				<div class="col-md-3 nav-box nav-box-green">3</div>
-				<div class="col-md-2"></div>
+				<div class="col-md-3 nav-box nav-start nav-box-red" ng-click="toggle('about')">About Me</div>
+				<div class="col-md-3 nav-box nav-start nav-box-yellow" ng-click="toggle('contact')">Contact</div>
+				<div class="col-md-3 nav-box nav-start nav-box-green" ng-click="toggle('portfolio')">Portfolio</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 nav-box nav-box-red" ng-show="about" ng-click="toggle('about')">
+					<p>This is going to be a small paragraph about me and my career goals. maybe a little longer than the first try</p>
+					<a href="">Resume</a>
+				</div>
+				<div ng-show="contact" >
+					<div class="col-md-3"></div>
+					<div class="col-md-3 nav-box nav-box-yellow" ng-click="toggle('contact')">
+						<p>Another paragraph with info on contacting me through email, linked in and github</p>
+					</div>
+				</div>
+				<div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3 nav-box nav-box-green" ng-show="portfolio" ng-click="toggle('portfolio')">
+						<p>a paragraph with info on some projects and links to the website with working projects</p>
+					</div>
+				</div>
 
 			</div>
 		</div>
