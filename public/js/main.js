@@ -1,5 +1,5 @@
-var app = angular.module('myApp', []);
-app.controller('mainController', ['$scope', function($scope) {
+var app = angular.module('myApp', ['ui.bootstrap', 'ngAnimate']);
+app.controller('mainController', ['$scope', '$modal', '$log', function($scope, $modal, $log) {
 	$scope.about = false;
 	$scope.contact = false;
 	$scope.portfolio = false;
@@ -22,5 +22,43 @@ app.controller('mainController', ['$scope', function($scope) {
 		}
 	};
 
+	$scope.open = function(modal) {
+	    	if (modal === 'resume') {
+	    		var template = 'resumeContent.html';
+	    		var controller = 'resumeController';
+	    	}
+	    	else {
+	    		var template = 'portfolioContent.html';
+	    		var controller = 'portfolioController';
+	    	}
 
-}])
+	    var modalInstance = $modal.open( {
+      		animation: true,
+	      	templateUrl: template,
+	      	controller: controller,
+	      	size: 'lg',
+
+	    });
+
+    };
+
+
+}]);
+
+// Resume Modal Angular controller
+app.controller('resumeController', ['$scope', '$modalInstance', function($scope, $modalInstance) {
+
+  	$scope.close = function() {
+    	$modalInstance.close();
+  	};
+
+}]);
+
+// Portfolio Modal Angular controller
+app.controller('portfolioController', ['$scope', '$modalInstance', function($scope, $modalInstance) {
+
+  	$scope.close = function() {
+    	$modalInstance.close();
+  	};
+
+}]);
