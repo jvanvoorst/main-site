@@ -14,8 +14,8 @@
 
 </head>
 
-<body ng-controller="mainController" ng-cloak>
-		
+<body ng-controller="mainController">
+
 	<div class="background">
 		<div class="container nav-container">
 			<div class="row">
@@ -28,7 +28,7 @@
 					<p class="nav-box-text">Having spent the last 14 years in the Information Technology field, I have gained experience in many aspects of IT and developed a passion and desire to learn more about programming and databases. To realize my dream of becoming a web application developer, I attended the RefactorU full-stack boot-camp and  am now seeking a position as a junior web app developer.</p>
 					<h3 class="pull-right link-text-red" ng-click="open('resume')">Resume</h3>
 				</div>
-				<div ng-show="contact" >
+				<div ng-show="contact">
 					<div class="col-lg-3"></div>
 					<div class="col-lg-3 nav-box nav-box-yellow" ng-click="toggle('contact')">
 						<p>Justin Van Voorst</p>
@@ -74,7 +74,7 @@
 	        			<a href="http://ice.justinvanvoorst.com"><img src="../images/ice.jpg" class="portfolio-images"></a>
 	        		</div>
 		        	<div class="col-md-6">
-		        		<p>This was my final project at RefactorU. It uses the mean stack (MongoDB, Express, Angular, and Node), plus Passport for user authentication, and Twilio’s API for sending and receiving sms. The app is an alerting system for overdue backcountry adventurers. You set-up people you want to alert, and alerts for a specific time with the details of your trip and the app will send out alert text messages to these people. While the app is fully functional I have set it to not send out sms messages at this time and warn that the app is for demo only.</p>
+		        		<p>This was my final project at RefactorU. It uses the mean stack (MongoDB, Express, Angular, and Node), plus Passport for user authentication, and Twilio’s API for sending and receiving sms. This app is an alerting system for overdue backcountry adventurers. You set up alerts with details of your trip along with the people you want the alerts sent to and the app will send out a text messages to those people when you are overdue. While the app is fully functional I have disabled the sms messaging at this time and set the system to warn any potential users that the app is for demo purposes only. Click on the image to be taken to the website.</p>
 		        	</div>
 		        </div>
 		        <div class="row next-row">
