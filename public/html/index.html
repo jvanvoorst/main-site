@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 
 </head>
-//dev
+
 <body ng-controller="mainController" ng-cloak>
 
 	<div class="container">
@@ -31,6 +31,8 @@
 								<h3 class="pull-right link-text-red" ng-click="open('resume')">Resume</h3>
 							</div>
 						</div>
+					</accordian-group>	
+					<accordian-group is-open="false">	
 						<div class="col-lg-3">
 							<accordion-heading>
 								<div class="nav-start nav-box-red">Contact</div>
@@ -49,7 +51,7 @@
 		</div>
 	</div>
 		
-	<!-- <div class="background">
+	<div class="background">
 		<div class="container nav-container">
 			<div class="row">
 				<div class="col-lg-3 nav-start nav-box-red" ng-click="toggle('about')">About Me</div>
@@ -81,7 +83,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<!-- Resume Modal Body -->
 	<div>
