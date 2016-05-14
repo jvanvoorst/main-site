@@ -26,7 +26,9 @@
 			<div class="row">
 				<div class="col-lg-3 nav-box nav-box-red" ng-show="about" ng-click="toggle('about')">
 					<p class="nav-box-text">Having spent the last 14 years in the Information Technology field, I have gained experience in many aspects of IT and developed a passion and desire to learn more about programming and databases. To realize this desire of becoming a web application developer, I attended the RefactorU full-stack boot-camp and am now seeking a position as a web application developer.</p>
-					<h3 class="pull-right link-text-red" ng-click="open('resume')">Resume</h3>
+					<div class="buttons">
+						<button class="btn btn-lg btn-danger" ng-click="open('resume')">Resume</button>
+					</div>
 				</div>
 				<div ng-show="contact">
 					<div class="col-lg-3"></div>
@@ -43,8 +45,10 @@
 					<div class="col-lg-3"></div>
 					<div class="col-lg-3"></div>
 					<div class="col-lg-3 nav-box nav-box-blue" ng-show="portfolio" ng-click="toggle('portfolio')">
-						<p>These are some of the projects that I have been working on recently at the link below.</p>
-						<h3 class="pull-right link-text-blue" ng-click="open('portfolio')">Portfolio</h3>
+						<p class="nav-box-text">These are some of the projects that I have been working on recently at the link below.</p>
+						<div class="buttons">
+							<button class="btn btn-default btn-lg" ng-click="open('portfolio')">Portfolio</button>
+						</div>
 					</div>
 				</div>
 			</div>
